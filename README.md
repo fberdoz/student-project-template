@@ -17,7 +17,7 @@ my-project/
   build/                  # compilation output (git-ignored, for local latex compilation)
 ```
 
-- **`paper.tex`** is the paper source. Use `main_<venue>.tex` when targeting multiple venues or resubmitting. Please read [this guide](https://fberdoz.github.io/teaching/bibtex-guide/) before writing anyting.
+- **`paper.tex`** is the paper source. Use `main_<venue>.tex` when targeting multiple venues or resubmitting. Please read [this guide](https://fberdoz.github.io/teaching/paper-writing-guide/) before writing anything.
 - **`thesis.tex`** is the thesis or semester/master project report. Uses style files from `author_kit_thesis/`.
 - **`proposal.tex`** is the project proposal, typically written before the main work begins.
 - **`*.tex`** other optional tex files, such as `poster.tex`, `slides.tex`, etc. relevant for the project.
@@ -29,7 +29,7 @@ my-project/
 - **`build/`** must be git-ignored. This is for compilation artifacts when compiling LaTeX locally.
 
 ## `page.md` template
-Below is a simple `page.md` template. You can find an example of the final rendering [here](https://fberdoz.github.io/projects/sd-square/).
+Below is a simple `page.md` template. You can find an example of the final rendering [here](https://fberdoz.github.io/projects/sd-square/). The header (links) and footer (citation) information will be handled automatically, you just have to care about the content.
 ```markdown
 ## Overview
 
