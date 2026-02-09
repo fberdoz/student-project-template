@@ -1,0 +1,120 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{graphicx}
+\usepackage[margin=2.8cm]{geometry}
+\usepackage{wrapfig}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\usepackage{color}
+\usepackage[english]{babel}
+\usepackage{forloop}
+\usepackage{caption}
+\usepackage[backend=biber]{biblatex}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\DeclareFieldFormat{title}{\iffieldundef{url}
+    {#1}
+    {\href{\thefield{url}}{#1}}}
+
+% Handle booktitle field for proceedings
+\DeclareFieldFormat[inproceedings]{title}{\iffieldundef{url}
+    {#1}
+    {\href{\thefield{url}}{#1}}}
+
+% Handle booktitle field for proceedings
+\DeclareFieldFormat[article]{title}{\iffieldundef{url}
+    {#1}
+    {\href{\thefield{url}}{#1}}}
+
+
+% Now hide the url
+\DeclareFieldFormat{url}{}
+
+% You might also want to add this to ensure consistency
+\DeclareFieldFormat[inproceedings]{booktitle}{#1}
+
+\setlength{\bibitemsep}{0pt}  % Adjust spacing between entries
+\renewcommand{\bibfont}{\footnotesize}  % Change font size
+\addbibresource{references.bib}
+
+\newenvironment{reqlist}{\par \medskip \noindent \begin{tabular}{cp{0.83\textwidth}r} \\[-24pt]}{\end{tabular}}
+\newcommand\req{\\ \smallskip \smallskip \hspace{0.24cm} $\bullet$\hspace{-0.2cm} & }
+
+\newcounter{num}
+\newcommand\effort[1]{\mbox{(\forloop{num}{0}{\value{num} < #1}{$\star$})}}
+
+
+\begin{document}
+	
+\thispagestyle{empty}
+
+\noindent
+\hrulefill \vspace{6pt}
+
+\noindent
+\includegraphics[viewport=8 8 185 55]{assets/eth_logo_black} \hfill
+\includegraphics[trim=0 0 2 0]{assets/disco-logo-col} \hspace{-6pt} \vspace{-6pt}
+
+\noindent \hrulefill \vspace{4pt}
+
+\hfill Prof.\ R.\ Wattenhofer
+
+\vspace{2em}
+\noindent \textbf{\LARGE Project Title}
+
+\paragraph{Motivation:} Describe the motivation and context for the project. Explain the problem being addressed and why it matters. Reference relevant prior work~\cite{TestReference, TestReference2}.
+
+\setlength{\columnsep}{0.8cm}%
+\begin{wrapfigure}{r}{5cm}
+	\vspace{-0.5cm}
+	\includegraphics[width=5cm]{assets/example_figure}
+    \caption*{An example figure illustrating the method or concept.}
+    \vspace{-1.2cm}
+\end{wrapfigure}
+
+\paragraph{Method:} Outline the proposed approach.
+
+
+\paragraph{Deliverables:}
+Describe the expected deliverables of the project.
+
+% Only for baits on Disco website
+% \paragraph{Requirements:} 
+% Describe the skills and background expected from the student. 
+
+\paragraph{Contact:}
+% Check the info of the supervisors on the DISCO website: https://disco.ethz.ch/members
+\begin{itemize}
+        \item Supervisor 1 : \href{mailto:supervisor1@ethz.ch}{\texttt{supervisor1@ethz.ch}}, Office
+        \item Supervisor 2 (optional) : \href{mailto:supervisor2@ethz.ch}{\texttt{supervisor2@ethz.ch}}, Office
+\end{itemize}
+
+\printbibliography
+
+\newpage
+
+\subsection*{Detailed Project Outline}
+We denote the following primary tasks mandatory (on the right side you find a rough estimate for the time that we allocate to the respective task):
+\begin{reqlist}
+	\req Literature research & \effort{1}
+	\req Implement the method. & \effort{3}
+    \req Write a report. & \effort{2}
+	\req Present your findings. & \effort{1}
+\end{reqlist}
+
+\subsection*{Extensions}
+\noindent Apart from these requirements, we can think of plenty of ways to extend the project:
+\begin{itemize}
+	\item Extension idea 1.
+	\item Extension idea 2.
+\end{itemize}
+
+\subsection*{The Student's Duties}
+\begin{itemize}
+	\item One meeting per week with the advisors to discuss current matters.
+	\item Regular check-ins into the provided \emph{revision control system}.
+	\item A final report in English, presenting work and results.
+	\item A final presentation (15 min) of the work and results obtained in the project.
+\end{itemize}
+
+\end{document}
