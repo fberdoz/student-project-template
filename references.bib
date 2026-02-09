@@ -1,15 +1,57 @@
-@InProceedings{TestReference,
-	 author = "Author One and Author Two",
-	 title = "A Theoretical Work on Computer Science",
-	 booktitle = "30th Symposium on Comparative Irrelevance, Somewhere, Some Country",
-	 month = jun,
-	 year = 1999
+% Bibliography file shared across all .tex files in this project.
+% See https://fberdoz.github.io/teaching/bibtex-guide/ for formatting guidelines.
+%
+% Key format:    <firstauthor><year><firstword> (all lowercase)
+% Title:         wrap in double braces {{...}} to preserve capitalization
+% Author names:  LastName, F. separated by "and"; use "and others" if >6 authors
+
+%% --- Conference paper (inproceedings) ---
+% Required: author, title, booktitle, year
+@inproceedings{smith2026example,
+  title     = {{Example Conference Paper}},
+  author    = {Smith, J. and Doe, A.},
+  booktitle = {{Advances in Neural Information Processing Systems (NeurIPS)}},
+  year      = {2026}
 }
 
-@InProceedings{TestReference2,
-	 author = "Author One and Author Two",
-	 title = "A Theoretical Work on Computer Science",
-	 booktitle = "30th Symposium on Comparative Irrelevance, Somewhere, Some Country",
-	 month = jun,
-	 year = 1999
+%% --- Journal article ---
+% Required: author, title, journal, year
+% Optional: volume, number, pages
+@article{smith2024example,
+  title   = {{Example Journal Article}},
+  author  = {Smith, J. and Doe, A.},
+  journal = {{Journal Name}},
+  volume  = {12},
+  number  = {3},
+  pages   = {101--115},
+  year    = {2024}
+}
+
+%% --- arXiv preprint (use @misc, not @article) ---
+% Required: author, title, year, eprint, archivePrefix
+@misc{smith2023example,
+  title         = {{Example arXiv Preprint}},
+  author        = {Smith, J. and Doe, A.},
+  year          = {2023},
+  eprint        = {2301.01234},
+  archivePrefix = {arXiv}
+}
+
+%% --- Book ---
+% Required: author, title, publisher, year
+% Optional: pages
+@book{smith2020example,
+  title     = {{Example Book}},
+  author    = {Smith, J. and Doe, A.},
+  publisher = {{Publisher}},
+  year      = {2020}
+}
+
+%% --- Website (last resort) ---
+% Required: title, url, note (access date)
+% Optional: author, year
+@misc{examplewebsite,
+  title = {{Example Website}},
+  url   = {https://example.com},
+  note  = {Accessed February 8, 2026}
 }
