@@ -1,6 +1,6 @@
 # Projects
 
-This repository backs-up the **paper** (LaTeX) and an optional **project page** (Markdown or HTML) relevant to your project. The file/folder naming convention used in this repository is important due to several automations.
+This repository serves multiple purposes: it contains the template for your **thesis**, backs-up your any **paper** we en up submitting, and contains an optional **project page** (Markdown or HTML) relevant to your project. The file/folder naming convention used in this repository is important due to several automations. This repository will be linked to an overleaf project where you will do most of the editing.
 
 ## Structure
 
