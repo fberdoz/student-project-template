@@ -21,7 +21,7 @@ my-project/
 - **`thesis.tex`** is the thesis or semester/master project report. Uses style files from `author_kit_thesis/`.
 - **`proposal.tex`** is the project proposal, typically written before the main work begins.
 - **`*.tex`** other optional tex files, such as `poster.tex`, `slides.tex`, etc. relevant for the project.
-- **`references.bib`** is shared across venues; keep one copy at the root. Each bibtex entry should follow [these guidlines](https://fberdoz.github.io/teaching/bibtex-guide/).
+- **`references.bib`** is shared across venues; keep one copy at the root. Each bibtex entry should follow [these guidelines](https://fberdoz.github.io/teaching/bibtex-guide/).
 - **`author_kit_<venue>/`** holds style files for each target venue.
 - **`author_kit_thesis/`** holds thesis-specific style files and templates (e.g., university formatting requirements).
 - **`assets/`** holds all media (paper figures, web images, videos). Reference them with relative paths: `assets/figure.pdf`.
